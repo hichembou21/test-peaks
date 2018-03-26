@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Detail character</title>
+        <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <header>
+        <nav class="navbar navbar-dark bg-primary">
+
+            <a class="navbar-brand" href="/"><img src="/img/marvel.png" alt="picture" width="100" height="70"></a>
+            
+        </nav>
+        </header>
+        <div class="character-container container-col">
+            <h3 class="title text-center">{{ dataM.name }}</h3>
+            <img class="img-item" src="{{ dataM.thumbnail.path}}.{{ dataM.thumbnail.extension}}" alt="image character">
+            <p class="descr-character"> {{ dataM.description }}</p>
+        
+            <span class="text-center number-comics">number of comics : {{ dataM.comics.items|length }}</span>
+
+            <div class="card bg-light container-col">
+                <p class="name-comic">{{ dataM.comics.items[0]['name'] }}</p>
+                <p class="name-comic">{{ dataM.comics.items[1]['name'] }}</p>
+                <p class="name-comic">{{ dataM.comics.items[2]['name'] }}</p>
+            </div>
+        
+        </div>
+        <!-- <div>
+            {{dataM.data}}
+        </div> -->
+        
+    
+
+    <footer>
+        <div class="card-footer text-muted">
+            
+        </div>
+    </footer> 
+    
+    
+    </body>
+</html>
